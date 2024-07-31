@@ -23,6 +23,8 @@ public class MainActivity extends ListActivity implements TextWatcher {
         c.addTextChangedListener(this);
         TextView d = findViewById(R.id.d);
         d.addTextChangedListener(this);
+        TextView e = findViewById(R.id.e);
+        e.addTextChangedListener(this);
         update();
     }
 
@@ -47,7 +49,8 @@ public class MainActivity extends ListActivity implements TextWatcher {
         TextView b = findViewById(R.id.b);
         TextView c = findViewById(R.id.c);
         TextView d = findViewById(R.id.d);
-        setListAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, Point.getPoints24(getFloat(a), getFloat(b), getFloat(c), getFloat(d))));
+        TextView e = findViewById(R.id.e);
+        setListAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, Point.getPoints(getFloat(a), getFloat(b), getFloat(c), getFloat(d), getFloat(e))));
 //        Log.i(TAG, "WL_DEBUG update cost = " + (System.currentTimeMillis() - start));
     }
 
